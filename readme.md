@@ -1,6 +1,6 @@
 # Wordpress VueJS Application Bundle
 
-A integrated VueJS 2.0 and Wordpress application built on Composer and Webpack.
+An integrated VueJS 2.0 and Wordpress application built on Composer and Webpack.
 
 ## Requirements
 - Composer
