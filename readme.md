@@ -4,7 +4,7 @@ An integrated VueJS 2.0 and Wordpress application built on Composer and Webpack.
 
 ## Requirements
 - Composer
-- Node JS (Yarn works great too!)
+- Node (Yarn works great too!)
 
 ## Installation
 - Within the project root, install wordpress from Composer using `composer install`.
