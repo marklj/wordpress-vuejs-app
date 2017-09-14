@@ -19,3 +19,9 @@ Rather than running `npm run build prod` after every change, a more productive a
 
 ## Development Server
 This project was tested using Laravel Valet as the development server environment. Other environments will most likely work just fine, but still may need some tinkering.
+
+## References
+- https://codex.wordpress.org/Giving_WordPress_Its_Own_Directory
+- https://roots.io/using-composer-with-wordpress/
+- https://github.com/bstavroulakis/vue-wordpress-pwa
+- https://developer.wordpress.org/rest-api/
