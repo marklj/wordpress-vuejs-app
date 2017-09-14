@@ -17,7 +17,7 @@ An integrated VueJS 2.0 and Wordpress application built on Composer and Webpack.
 ## VueJS Development
 Rather than running `npm run build prod` after every change, a more productive approach can be to run `npm run dev` within the public/app directory. You will then have an auto-reloading dev environment at http://localhost:8080.
 
-The app is set up with a central Vuex data store, which is located up in the public/app/src/store directory. For more information on how to use Vuex, visit: https://vuex.vuejs.org.
+The app is set up with a central Vuex data store, which is located in the public/app/src/store directory. For more information on how to use Vuex, visit: https://vuex.vuejs.org.
 
 ## Development Server
 This project was tested using Laravel Valet as the development server environment. Other environments will most likely work just fine, but still may need some tinkering.
