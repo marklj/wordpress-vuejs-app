@@ -1,7 +1,8 @@
 {
   "require": {
     "php": ">=5.4",
-    "johnpbloch/wordpress": "4.8"
+    "johnpbloch/wordpress": "4.8",
+    "vlucas/phpdotenv": "^2.4"
   },
   "extra": {
     "wordpress-install-dir": "public/wp"

@@ -1,4 +1,11 @@
-<?php
+<?php require "../vendor/autoload.php";
+
+/**
+ *  Load environment variables
+ */
+$dotenv = new Dotenv\Dotenv(__DIR__, '../.env');
+$dotenv->load();
+
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
  * wp-blog-header.php which does and tells WordPress to load the theme.
@@ -16,5 +23,9 @@ define('WP_USE_THEMES', false);
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp/wp-blog-header.php' );
 
-
-require(dirname( __FILE__ ) . '/static.html');
+if(getenv('APP_ENV') == 'local') {
+    require(dirname( __FILE__ ) . '/app/index.html');
+}
+else {
+    require(dirname( __FILE__ ) . '/app/dist/index.html');
+}
