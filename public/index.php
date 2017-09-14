@@ -23,9 +23,4 @@ define('WP_USE_THEMES', false);
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp/wp-blog-header.php' );
 
-if(getenv('APP_ENV') == 'local') {
-    require(dirname( __FILE__ ) . '/app/index.html');
-}
-else {
-    require(dirname( __FILE__ ) . '/app/dist/index.html');
-}
+require(dirname( __FILE__ ) . '/static.html');
