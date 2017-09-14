@@ -11,6 +11,7 @@ var express = require('express')
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
+var del = require('delete');
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -34,10 +35,15 @@ var hotMiddleware = require('webpack-hot-middleware')(compiler, {
 })
 // force page reload when html-webpack-plugin template changes
 compiler.plugin('compilation', function (compilation) {
+  del.sync([path.join(__dirname, '../../.webpack_tmp/*.hot-update.js*')], { force: true });
   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
     hotMiddleware.publish({ action: 'reload' })
     cb()
   })
+})
+
+compiler.plugin('start', () => {
+
 })
 
 // proxy api requests

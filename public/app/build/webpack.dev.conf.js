@@ -7,7 +7,6 @@ var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 var WriteFilePlugin = require('write-file-webpack-plugin')
-var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -24,9 +23,6 @@ module.exports = merge(baseWebpackConfig, {
     path: path.join(__dirname, '../../.webpack_tmp')
   },
   plugins: [
-    new WebpackCleanupPlugin({
-      preview: true,
-    }),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),

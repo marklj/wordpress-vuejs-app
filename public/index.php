@@ -24,7 +24,8 @@ define('WP_USE_THEMES', false);
 require( dirname( __FILE__ ) . '/wp/wp-blog-header.php' );
 
 if(getenv('APP_ENV') == 'local') {
-    require(dirname( __FILE__ ) . '/.webpack_tmp/index.html');
+    $html = file_get_contents(dirname( __FILE__ ) . '/.webpack_tmp/index.html');
+    print str_replace('/app.js', '/.webpack_tmp/app.js', $html);
 }
 else {
     require(dirname( __FILE__ ) . '/static/index.html');
