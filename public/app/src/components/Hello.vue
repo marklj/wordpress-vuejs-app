@@ -12,22 +12,22 @@
 </template>
 
 <script>
-import axios from 'axios';
+import types from '../store/types';
 
 export default {
   name: 'hello',
   data() {
     return {
       msg: 'Welcome to Your Vue.js Wordpress App',
-      posts: [],
     };
   },
+  computed: {
+    posts() {
+      return this.$store.state.posts;
+    },
+  },
   mounted() {
-    const WP_API_URL = 'http://wp.dev/wp-json';
-    axios.get(`${WP_API_URL}/wp/v2/posts/`)
-      .then((response) => {
-        this.posts = response.data;
-      });
+    this.$store.dispatch(types.GET_POSTS);
   },
 };
 </script>
