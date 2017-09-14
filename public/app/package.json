@@ -14,7 +14,9 @@
     "axios": "^0.16.2",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0",
-    "vuex": "^2.4.0"
+    "vuex": "^2.4.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "write-file-webpack-plugin": "^4.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -18,7 +18,7 @@ export default {
   name: 'hello',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js Wordpress App',
+      msg: 'Welcome to Your Vue.js Wordpress App??',
     };
   },
   computed: {
