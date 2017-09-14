@@ -23,7 +23,7 @@ define('WP_USE_THEMES', false);
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp/wp-blog-header.php' );
 
-if(getenv('APP_ENV') == 'local') {
+if(getenv('APP_ENV') === 'local') {
     $html = file_get_contents(dirname( __FILE__ ) . '/.webpack_tmp/index.html');
     print str_replace('/app.js', '/.webpack_tmp/app.js', $html);
 }
